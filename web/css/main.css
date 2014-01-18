@@ -1,10 +1,8 @@
-body
+*
 {
-    font-family: arial;
-    color: white;
-    
+    padding: 0;
+    margin: 0;
 }
-
 ul,a
 {
     list-style: none;
@@ -15,41 +13,53 @@ ul,a
 .header
 {
 
-    background: -webkit-linear-gradient(bottom, rgb(1,37,59) 5%, rgb(3,96,152) 100%); /* For Safari */
-    background: -o-linear-gradient(bottom, rgb(1,37,59) 5%, rgb(3,96,152) 100%); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(bottom, rgb(1,37,59) 5%, rgb(3,96,152) 100%); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(bottom, rgb(1,37,59) 5%, rgb(3,96,152) 100%); /* Standard syntax */
-    
+
+    font-family: arial;
+    color: white;
+    font-size: 15px;
+    height: 50px;
+    background: url(../img/header_bg_run.jpg) repeat-x;
 }
 /*menu alineado en horizontal*/
-ul > li 
+ul > li  
 {
     float: left; 
 }
 
+ul > li > ul > li
+{
+    width: 400px; 
+}
+
 /*cuando el puntero esta encima de li se muestra su hijo ul*/
-ul > li:hover > ul
+ul li:hover ul
 {
     display:block;
 }
-ul > li > a
+ul li a
 {
     display: block;
-    
+    padding:10px;
+
 }
-ul > li > ul > li 
+ul li a:hover
 {
-    position: relative;
+    background: rgb(4,72,114);
+    border-top: rgb(0,40,64) solid 1px; 
+    border-left: rgb(2,66,106) solid 1px;
+    border-right: rgb(2,66,106) solid 1px;
+    border-bottom: rgb(7,115,182) solid 1px;
+    border-radius: 4px 4px 1px 1px;
 }
-/*no mostrar el submenu*/
-ul > li > ul
+/*no mostrar el submenu y sacarlo del flujo normal de la pagina*/
+ul li ul
 {
     display:none;
     position: absolute;
 }
 
 /*Logotipo*/
-.navbar-brand 
+.brand 
 {
     float: left;
     padding: 10px 10px;
@@ -60,33 +70,42 @@ ul > li > ul
 
 }
 
-.navbar-brand 
+.brand 
 {
     color: #fff;
 }
 
-.navbar-brand:hover,
-.navbar-brand:focus 
+.brand:hover,
+.brand:focus 
 {
     text-decoration: none;
-
-}
-
-/*Recuadro que se muestra cuando un pestaña esta presionada*/
-.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus 
-{
-    color: #ffffff;
-    background-color: blue;
-}
-
-ul > li > a 
-{
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-
-/*Texto del menu*/
-.navbar-inverse .navbar-nav > li > a 
-{
     color: #fff;
+
+}
+
+#search
+{
+    padding:10px 10px;
+}
+.cuadro
+{
+    height: auto;
+    width:120px;
+    background: -webkit-linear-gradient(bottom, rgb(1,37,59) 5%, rgb(3,96,152) 100%); /* For Safari */
+    background: -o-linear-gradient(bottom, rgb(1,37,59) 5%, rgb(3,96,152) 100%); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom, rgb(1,37,59) 5%, rgb(3,96,152) 100%); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(bottom, rgb(1,37,59) 5%, rgb(3,96,152) 100%); /* Standard syntax */
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.05, rgb(1,37,59)),
+        color-stop(1, rgb(3,96,152))
+        );
+
+    -moz-box-shadow:    1px 1px 3px 3px #ccc;
+    -webkit-box-shadow: 1px 1px 3px 3px #ccc;
+    box-shadow:   1px 1px 3px 3px #ccc;
+    color: white;
+    white-space:nowrap;
 }
