@@ -52,7 +52,7 @@ ul > li > ul
 .navbar-brand 
 {
     float: left;
-    padding: 15px 15px;
+    padding: 10px 10px;
     font-size: 18px;
     line-height: 20px;
     font-family: verdana;
@@ -82,10 +82,11 @@ ul > li > ul
 ul > li > a 
 {
     padding-top: 15px;
-    padding-bottom: 6px;
+    padding-bottom: 15px;
 }
 
 /*Texto del menu*/
-.navbar-inverse .navbar-nav > li > a {
+.navbar-inverse .navbar-nav > li > a 
+{
     color: #fff;
 }
