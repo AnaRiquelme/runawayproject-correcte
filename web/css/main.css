@@ -24,6 +24,7 @@ ul,a
 ul > li  
 {
     float: left; 
+    position: relative;
 }
 
 ul > li > ul > li
@@ -56,6 +57,7 @@ ul > li > a:hover
     border-right: rgb(2,66,106) solid 1px;
     border-bottom: rgb(7,115,182) solid 1px;
     border-radius: 4px 4px 1px 1px;
+    text-decoration: none;
 }
 /*no mostrar el submenu y sacarlo del flujo normal de la pagina*/
 ul li ul
@@ -64,6 +66,10 @@ ul li ul
     position: absolute;
 }
 
+ul li ul a 
+{
+  color: white;   
+}
 /*Logotipo*/
 .brand 
 {
